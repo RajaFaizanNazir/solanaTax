@@ -1,11 +1,16 @@
 use anchor_lang::prelude::*;
 use anchor_spl::token::{Transfer, Token};
+//use anchor_spl::token;
+//use anchor_spl::token::{MintTo};
+//use solana_program::system_instruction::transfer;
+
 
 declare_id!("EP1LCMGBnETvbEZRkwUQh8ttjjtwLik7wAsV6eHWVYcj");
 
 #[program]
 pub mod token_contract {
     use super::*;
+
 
     pub fn transfer_token(ctx: Context<TransferToken>,ammount: u64) -> Result<()> {
         // Create the Transfer struct for our context
